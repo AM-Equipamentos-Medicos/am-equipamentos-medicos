@@ -1,24 +1,23 @@
-
 const produtos = [
     {
         nome: "Mamógrafo AIDIA",
         categoria: "mamografia",
-        imagem: "img/aidia.png",
-        especificacoes: "Alta resolução, pixel de 76µm, tecnologia FOCUS Csl, detector indireto.",
+        imagem: "img/produto_1.jpg",
+        especificacoes: "Detector FOCUS Csl, alta resolução, conforto e precisão para mamografia digital.",
         whatsapp: "Mamógrafo AIDIA"
     },
     {
         nome: "Agulha de Biópsia UNIGUN",
         categoria: "biopsia",
-        imagem: "img/unigun.png",
-        especificacoes: "Agulha ecogênica, ponta trifacetada, compatível com pistola Alpha Core.",
+        imagem: "img/produto_2.jpg",
+        especificacoes: "Ponta trifacetada, ecogênica, compatível com pistola Alpha Core.",
         whatsapp: "Agulha de Biópsia UNIGUN"
     },
     {
         nome: "Raio-X Móvel Pégaso",
         categoria: "radiologia",
-        imagem: "img/pegaso.png",
-        especificacoes: "Gerador de 125KV/500mA, mobilidade e segurança, alta frequência.",
+        imagem: "img/produto_3.jpg",
+        especificacoes: "125KV/500mA, gerador de alta frequência, ideal para mobilidade e precisão.",
         whatsapp: "Raio-X Móvel Pégaso"
     }
 ];
