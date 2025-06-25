@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AM Equipamentos Médicos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .container {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .search {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .search input {
+      padding: 10px;
+      width: 80%;
+      max-width: 500px;
+      font-size: 16px;
+    }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .produto {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+    .produto:hover {
+      transform: translateY(-5px);
+    }
+    .produto img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .produto h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .produto p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .whatsapp {
+      background-color: #25D366;
+      color: #fff;
+      padding: 10px 15px;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      background: #111;
+      color: #aaa;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo AM Equipamentos">
+    <h1>AM Equipamentos Médicos</h1>
+    <p>Aparelhos usados e semi-novos com qualidade e confiança</p>
+  </header>
+
+  <nav>
+    <a href="#mamografia">Mamografia</a>
+    <a href="#biopsia">Biópsia</a>
+    <a href="#radiologia">Radiologia</a>
+    <a href="#outros">Outros</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="container">
+    <div class="search">
+      <input type="text" id="busca" placeholder="Buscar produto por nome ou palavra-chave..." onkeyup="filtrarProdutos()">
+    </div>
+
+    <section id="mamografia">
+      <h2>Mamografia</h2>
+      <div class="produtos" id="produtos-mamografia">
+        <!-- Produtos Mamografia -->
+        <div class="produto">
+          <img src="https://via.placeholder.com/250x150" alt="Mamógrafo AIDIA">
+          <h3>Mamógrafo Digital AIDIA</h3>
+          <p>Alta definição, detector FOCUS Csl, pixel de 76µm. Registro ANVISA: 80759910001</p>
+          <a class="whatsapp" href="https://wa.me/5592981770202?text=Olá! Tenho interesse no Mamógrafo Digital AIDIA">Solicitar via WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outras categorias seguem estrutura similar -->
+
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <p>Entre em contato diretamente pelo nosso WhatsApp para informações, orçamentos ou dúvidas.</p>
+      <a class="whatsapp" href="https://wa.me/5592981770202">Conversar no WhatsApp</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AM Equipamentos Médicos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function filtrarProdutos() {
+      const termo = document.getElementById('busca').value.toLowerCase();
+      document.querySelectorAll('.produto').forEach(el => {
+        const texto = el.innerText.toLowerCase();
+        el.style.display = texto.includes(termo) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
